@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="Daniel Bennett ">
+<meta name="description" content="As to be expected from the introduction of an introductory book, things started out fairly straightforward and I don’t think I had any major problems with this chapter.
+Exercises Exercise 1.1
+Below is a sequence of expressions. What is the result printed by the interpreter in response to each expression? Assume that the sequence is to be evaluated in the order in which it is presented.
+10 ;10 (&#43; 5 3 4) ;12 (- 9 1) ;8 (/ 6 2) ;3 (&#43; (* 2 4) (- 4 6)) ;6 (define a 3) ;a (define b (&#43; a 1)) ;b (&#43; a b (* a b)) ;19 (= a b) ;#f (if (and (&amp;gt; b a) (&amp;lt; b (* a b))) b a) ;4 (cond ((= a 4) 6) ((= b 4) (&#43; 6 7 a)) (else 25)) ;16 (&#43; 2 (if (&amp;gt; b a) b a)) ;6 (* (cond ((&amp;gt; a b) a) ((&amp;lt; a b) b) (else -1)) (&#43; a 1))	;16 Exercise 1." />
+<meta name="keywords" content=", Learning, SICP, Examples" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="#252627" />
+<link rel="canonical" href="Bennett94.com/sicp/1.1/" />
+
+
+    <title>
+        
+            SICP 1.1 Exercises :: 안녕하세요 
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="Bennett94.com/main.min.84ed5579024525d4b50458514d1a43e40dd5272df45c7cd6da85b225af457154.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="Bennett94.com/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Bennett94.com/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Bennett94.com/favicon-16x16.png">
+    <link rel="manifest" href="Bennett94.com/site.webmanifest">
+    <link rel="mask-icon" href="Bennett94.com/safari-pinned-tab.svg" color="#252627">
+    <link rel="shortcut icon" href="Bennett94.com/favicon.ico">
+    <meta name="msapplication-TileColor" content="#252627">
+    <meta name="theme-color" content="#252627">
+
+<meta itemprop="name" content="SICP 1.1 Exercises">
+<meta itemprop="description" content="As to be expected from the introduction of an introductory book, things started out fairly straightforward and I don’t think I had any major problems with this chapter.
+Exercises Exercise 1.1
+Below is a sequence of expressions. What is the result printed by the interpreter in response to each expression? Assume that the sequence is to be evaluated in the order in which it is presented.
+10 ;10 (&#43; 5 3 4) ;12 (- 9 1) ;8 (/ 6 2) ;3 (&#43; (* 2 4) (- 4 6)) ;6 (define a 3) ;a (define b (&#43; a 1)) ;b (&#43; a b (* a b)) ;19 (= a b) ;#f (if (and (&gt; b a) (&lt; b (* a b))) b a) ;4 (cond ((= a 4) 6) ((= b 4) (&#43; 6 7 a)) (else 25)) ;16 (&#43; 2 (if (&gt; b a) b a)) ;6 (* (cond ((&gt; a b) a) ((&lt; a b) b) (else -1)) (&#43; a 1))	;16 Exercise 1.">
+<meta itemprop="datePublished" content="2020-01-15T16:08:23&#43;01:00" />
+<meta itemprop="dateModified" content="2020-01-15T16:08:23&#43;01:00" />
+<meta itemprop="wordCount" content="1136">
+<meta itemprop="image" content="Bennett94.com"/>
+
+
+
+<meta itemprop="keywords" content="Learning,SICP,Examples," /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="Bennett94.com"/>
+
+<meta name="twitter:title" content="SICP 1.1 Exercises"/>
+<meta name="twitter:description" content="As to be expected from the introduction of an introductory book, things started out fairly straightforward and I don’t think I had any major problems with this chapter.
+Exercises Exercise 1.1
+Below is a sequence of expressions. What is the result printed by the interpreter in response to each expression? Assume that the sequence is to be evaluated in the order in which it is presented.
+10 ;10 (&#43; 5 3 4) ;12 (- 9 1) ;8 (/ 6 2) ;3 (&#43; (* 2 4) (- 4 6)) ;6 (define a 3) ;a (define b (&#43; a 1)) ;b (&#43; a b (* a b)) ;19 (= a b) ;#f (if (and (&gt; b a) (&lt; b (* a b))) b a) ;4 (cond ((= a 4) 6) ((= b 4) (&#43; 6 7 a)) (else 25)) ;16 (&#43; 2 (if (&gt; b a) b a)) ;6 (* (cond ((&gt; a b) a) ((&lt; a b) b) (else -1)) (&#43; a 1))	;16 Exercise 1."/>
+
+
+
+    <meta property="article:section" content="SICP" />
+
+
+
+    <meta property="article:published_time" content="2020-01-15 16:08:23 &#43;0100 &#43;0100" />
+
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="Bennett94.com/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">$ cd /home/</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+        
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="Bennett94.com/freelance/">Freelance Work</a></li><li><a href="Bennett94.com/sicp/">SICP</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        processEscapes: true
+      }
+    });
+  </script>
+  
+  <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="Bennett94.com/sicp/1.1/">SICP 1.1 Exercises</a></h2>
+
+            
+
+            <div class="post-content">
+                <p>As to be expected from the introduction of an introductory book, things started out fairly straightforward and I don’t think I had any major problems with this chapter.</p>
+<h2 id="exercises">Exercises</h2>
+<p>Exercise 1.1</p>
+<p>Below is a sequence of expressions. What is the result printed by the interpreter in response to each expression? Assume that the sequence is to be evaluated in the order in which it is presented.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scheme" data-lang="scheme"><span style="color:#ae81ff">10</span> <span style="color:#75715e">;10</span>
+(+ <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span>) <span style="color:#75715e">;12</span>
+(- <span style="color:#ae81ff">9</span> <span style="color:#ae81ff">1</span>) <span style="color:#75715e">;8</span>
+(/ <span style="color:#ae81ff">6</span> <span style="color:#ae81ff">2</span>) <span style="color:#75715e">;3</span>
+(+ (* <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">4</span>) (- <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">6</span>)) <span style="color:#75715e">;6</span>
+(<span style="color:#66d9ef">define </span>a <span style="color:#ae81ff">3</span>) <span style="color:#75715e">;a</span>
+(<span style="color:#66d9ef">define </span>b (+ a <span style="color:#ae81ff">1</span>)) <span style="color:#75715e">;b</span>
+(+ a b (* a b)) <span style="color:#75715e">;19</span>
+(= a b) <span style="color:#75715e">;#f</span>
+
+(<span style="color:#66d9ef">if </span>(<span style="color:#66d9ef">and </span>(&gt; b a) (&lt; b (* a b))) 
+    b
+    a)
+<span style="color:#75715e">;4</span>
+
+(<span style="color:#66d9ef">cond </span>((= a <span style="color:#ae81ff">4</span>) <span style="color:#ae81ff">6</span>) 
+      ((= b <span style="color:#ae81ff">4</span>) (+ <span style="color:#ae81ff">6</span> <span style="color:#ae81ff">7</span> a))
+      (<span style="color:#66d9ef">else </span><span style="color:#ae81ff">25</span>))
+<span style="color:#75715e">;16</span>
+
+(+ <span style="color:#ae81ff">2</span> (<span style="color:#66d9ef">if </span>(&gt; b a) b a)) 
+<span style="color:#75715e">;6</span>
+
+(* (<span style="color:#66d9ef">cond </span>((&gt; a b) a) 
+         ((&lt; a b) b)
+         (<span style="color:#66d9ef">else </span><span style="color:#ae81ff">-1</span>))
+   (+ a <span style="color:#ae81ff">1</span>))		
+<span style="color:#75715e">;16</span></code></pre></div>
+<p>Exercise 1.2</p>
+<p>Translate the following expression into prefix form:</p>
+<p>$$\frac{5 + 4 + (2 - (3 - (6 + \frac{4}{5})))}{3(6 - 2)(2 - 7)}$$</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scheme" data-lang="scheme">(/ (+ <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">4</span> (- <span style="color:#ae81ff">2</span> (- <span style="color:#ae81ff">3</span> (+ <span style="color:#ae81ff">6</span> (/ <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">5</span>))))) 
+   (* <span style="color:#ae81ff">3</span> (- <span style="color:#ae81ff">6</span> <span style="color:#ae81ff">2</span>) (- <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">7</span>)))</code></pre></div>
+<p>Exercise 1.3</p>
+<p>Define a procedure that takes three numbers as arguments and returns the sum of the squares of the two larger numbers.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scheme" data-lang="scheme">(<span style="color:#66d9ef">define </span>(<span style="color:#a6e22e">square</span> a) (* a a))
+(<span style="color:#66d9ef">define </span>(<span style="color:#a6e22e">smallest</span> a b c)
+        (<span style="color:#66d9ef">cond </span>((<span style="color:#66d9ef">and </span>(&lt; a b) (&lt; a c)) a)
+              ((<span style="color:#66d9ef">and </span>(&lt; b a) (&lt; b c)) b)
+              (<span style="color:#66d9ef">else </span>c)))
+(<span style="color:#66d9ef">define </span>(<span style="color:#a6e22e">sumlargestsquares</span> a b c)
+        (<span style="color:#66d9ef">cond </span>((= a (<span style="color:#a6e22e">smallest</span> a b c)) (+ (<span style="color:#a6e22e">square</span> b) (<span style="color:#a6e22e">square</span> c)))
+              ((= b (<span style="color:#a6e22e">smallest</span> a b c)) (+ (<span style="color:#a6e22e">square</span> a) (<span style="color:#a6e22e">square</span> c)))
+              (<span style="color:#66d9ef">else </span>(+ (<span style="color:#a6e22e">square</span> a) (<span style="color:#a6e22e">square</span> b)))))</code></pre></div></p>
+<p>I realise here that I don’t need to separately define smallest as I’m only asking here if something is equal to it and I could combine the two procedures easily. This is just what I initially did.</p>
+<p>Exercise 1.4
+Observe that our model of evaluation allows for combinations whose operators are compound expressions. Use this observation to describe the behavior of the following procedure
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scheme" data-lang="scheme">(<span style="color:#66d9ef">define </span>(<span style="color:#a6e22e">a-plus-abs-b</span> a b)
+  ((<span style="color:#66d9ef">if </span>(&gt; b <span style="color:#ae81ff">0</span>) + -) a b))</code></pre></div></p>
+<p>If $b &gt; 0$ then this evalutes to (+ a b) by substitution.
+If $b ≤ 0$ then this evalutes to (- a b). However since $b$ is negative then $a - (-\lvert b \rvert)$ gives $(a + \lvert b \rvert)$. So this procedure is $a$ plus the absolute value of $b$.</p>
+<p>Exercise 1.5</p>
+<p>Ben Bitdiddle has invented a test to determine whether the interpreter he is faced with is using applicative-order evaluation or normal-order evaluation. He defines the following two procedures:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scheme" data-lang="scheme">(<span style="color:#66d9ef">define </span>(<span style="color:#a6e22e">p</span>) (<span style="color:#a6e22e">p</span>))
+(<span style="color:#66d9ef">define </span>(<span style="color:#a6e22e">test</span> x y) 
+  (<span style="color:#66d9ef">if </span>(= x <span style="color:#ae81ff">0</span>) 
+      <span style="color:#ae81ff">0</span> 
+      y))
+<span style="color:#75715e">;Then he evaluates the expression </span>
+(<span style="color:#a6e22e">test</span> <span style="color:#ae81ff">0</span> (<span style="color:#a6e22e">p</span>))</code></pre></div>
+What behavior will Ben observe with an interpreter that uses applicative-order evaluation? What behavior will he observe with an interpreter that uses normal-order evaluation? Explain your answer. (Assume that the evaluation rule for the special form if is the same whether the interpreter is using normal or applicative order: The predicate expression is evaluated first, and the result determines whether to evaluate the consequent or the alternative expression.)</p>
+<p>In normal-order evalutation we will be first checking (if (= 0 0) 0 (p)) which will evaluate to 0. In applicative-order evaluation we will try and resolve (p) first but (p) just calls itself in a loop and so the program cannot finish.</p>
+<p>Exercise 1.6</p>
+<p>Alyssa P. Hacker doesn’t see why if needs to be provided as a special form. “Why can’t I just define it as an ordinary procedure in terms of cond?” she asks. Alyssa’s friend Eva Lu Ator claims this can indeed be done, and she defines a new version of if:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scheme" data-lang="scheme">(<span style="color:#66d9ef">define </span>(<span style="color:#a6e22e">new-if</span> predicate 
+                then-clause 
+                else-clause)
+  (<span style="color:#66d9ef">cond </span>(<span style="color:#a6e22e">predicate</span> then-clause)
+        (<span style="color:#66d9ef">else </span>else-clause)))
+<span style="color:#75715e">;Eva demonstrates the program for Alyssa:</span>
+(<span style="color:#a6e22e">new-if</span> (= <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span>) <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">5</span>)
+<span style="color:#ae81ff">5</span>
+(<span style="color:#a6e22e">new-if</span> (= <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">1</span>) <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">5</span>)
+<span style="color:#ae81ff">0</span>
+<span style="color:#75715e">;Delighted, Alyssa uses new-if to rewrite the square-root program:</span>
+(<span style="color:#66d9ef">define </span>(<span style="color:#a6e22e">sqrt-iter</span> guess x)
+  (<span style="color:#a6e22e">new-if</span> (<span style="color:#a6e22e">good-enough?</span> guess x)
+          guess
+          (<span style="color:#a6e22e">sqrt-iter</span> (<span style="color:#a6e22e">improve</span> guess x) x)))</code></pre></div></p>
+<p>What happens when Alyssa attempts to use this to compute square roots? Explain.</p>
+<p>As the new-if is not a special form like the regular if it will be evaluated in applicative order. This results in an infinite loop as the recursive (sqrt-iter) is calculated before the new-if is worked through.</p>
+<p>Exercise 1.7</p>
+<p>The good-enough? test used in computing square roots will not be very effective for finding the square roots of very small numbers. Also, in real computers, arithmetic operations are almost always performed with limited precision. This makes our test inadequate for very large numbers. Explain these statements, with examples showing how the test fails for small and large numbers.</p>
+<p>For a small number a tolerance of 0.001 is not sufficient. For example (sqrt 0.0001) returns 0.03230844833048122 instead of the expected result of 0.01. If you then square this number you will get 0.00104383583. Then our check of 0.00104383583–0.0001 is within our tolerance but has not given us a good enough answer. For a large number if the calculation precision doesn’t come close enough we don’t have a satisfied end condition and the program won’t stop running as the guesses cannot get close enough to the required level.</p>
+<p>An alternative strategy for implementing good-enough? is to watch how guess changes from one iteration to the next and to stop when the change is a very small fraction of the guess. Design a square-root procedure that uses this kind of end test. Does this work better for small and large numbers?</p>
+<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scheme" data-lang="scheme">(<span style="color:#66d9ef">define </span>(<span style="color:#a6e22e">sqrt-iter</span> guess x)
+  (<span style="color:#66d9ef">if </span>(<span style="color:#a6e22e">good-enough?</span> guess x)
+      guess
+      (<span style="color:#a6e22e">sqrt-iter</span> (<span style="color:#a6e22e">improve</span> guess x) x)))
+(<span style="color:#66d9ef">define </span>(<span style="color:#a6e22e">improve</span> guess x)
+  (<span style="color:#a6e22e">average</span> guess (/ x guess)))
+(<span style="color:#66d9ef">define </span>(<span style="color:#a6e22e">average</span> x y) 
+  (/ (+ x y) <span style="color:#ae81ff">2</span>))
+(<span style="color:#66d9ef">define </span>(<span style="color:#a6e22e">good-enough?</span> guess x)
+  (&lt; (abs (- guess (<span style="color:#a6e22e">improve</span> guess x))) (* guess <span style="color:#ae81ff">0.001</span>)))
+(<span style="color:#66d9ef">define </span>(sqrt x)
+  (<span style="color:#a6e22e">sqrt-iter</span> <span style="color:#ae81ff">1.0</span> x))</code></pre></div>
+This gives (sqrt 0.0001) as 0.010000714038711746. For larger numbers the tolerance increases as it scales with the guess.</p>
+<p>Exercise 1.8</p>
+<p>Newton’s method for cube roots is based on the fact that if y is an approximation to the cube root of x , then a better approximation is given by the value</p>
+<p>$$\frac{\frac{x}{y^2} + 2y}{3}$$</p>
+<p>Use this formula to implement a cube-root procedure analogous to the square-root procedure. (In 1.3.4 we will see how to implement Newton’s method in general as an abstraction of these square-root and cube-root procedures.)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scheme" data-lang="scheme">(<span style="color:#66d9ef">define </span>(<span style="color:#a6e22e">square</span> x) (* x x))
+(<span style="color:#66d9ef">define </span>(<span style="color:#a6e22e">cbrt-iter</span> guess x)
+  (<span style="color:#66d9ef">if </span>(<span style="color:#a6e22e">good-enough?</span> guess x)
+      guess
+      (<span style="color:#a6e22e">cbrt-iter</span> (<span style="color:#a6e22e">improve</span> guess x) x)))
+(<span style="color:#66d9ef">define </span>(<span style="color:#a6e22e">improve</span> guess x)
+  (/ (+ (/ x (<span style="color:#a6e22e">square</span> guess)) (* <span style="color:#ae81ff">2</span> guess)) <span style="color:#ae81ff">3</span>))
+(<span style="color:#66d9ef">define </span>(<span style="color:#a6e22e">good-enough?</span> guess x)
+  (&lt; (abs (- guess (<span style="color:#a6e22e">improve</span> guess x))) (* guess <span style="color:#ae81ff">0.001</span>)))
+(<span style="color:#66d9ef">define </span>(<span style="color:#a6e22e">cbrt</span> x)
+  (<span style="color:#a6e22e">cbrt-iter</span> <span style="color:#ae81ff">1.0</span> x))</code></pre></div>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+  				<p>
+  					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="Bennett94.com/tags/learning">Learning</a></span><span class="tag"><a href="Bennett94.com/tags/sicp">SICP</a></span><span class="tag"><a href="Bennett94.com/tags/examples">Examples</a></span>
+  				</p>
+  			</div>
+
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+                <span><a href="Bennett94.com">Daniel Bennett</a></span>
+            
+            <span><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span>
+            <span> <a href="Bennett94.com/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">Djordje Atlialp</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="Bennett94.com/bundle.min.2d5469329143160ae2456a69c3c76dc2d0a3b212b46afe291a51bd68650ed6f8697e001dab54f1c272c77ce08092a8c55e5bb4314e0ee334aab4b927ec896638.js" integrity="sha512-LVRpMpFDFgriRWppw8dtwtCjshK0av4pGlG9aGUO1vhpfgAdq1TxwnLHfOCAkqjFXlu0MU4O4zSqtLkn7IlmOA=="></script>
+
+
+
+    </body>
+</html>

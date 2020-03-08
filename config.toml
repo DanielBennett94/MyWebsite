@@ -1,4 +1,4 @@
-baseURL = "Bennett94.com"
+baseURL = "https://danielbennett.netlify.com"
 title   = "안녕하세요"
 
 DefaultContentLanguage = "en"
